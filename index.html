@@ -6,7 +6,13 @@
     <body>
         
         <div id="app">
-            {{ message }}
+            <ul>
+                <todo-item
+                    v-for="item in list"
+                    v-bind:todo="item"
+                    v-bind:key="item.id"
+                ></todo-item>
+            </ul>
         </div>
         
         <script src="script.js"></script>
